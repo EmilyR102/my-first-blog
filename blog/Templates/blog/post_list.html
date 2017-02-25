@@ -9,11 +9,21 @@
 
 <body>
 
-<h2> Emily's Blog </h2>
+<div>
+<h1> Emily's Blog </h1>
+</div>
 
-<p>
-</p>
+{% for post in posts %}
+{{posts}}
+{% endfor %}
 
+<div>
+	<p>published: {{ post.published_date }}</p>
+	<h1><a href="">{{ post.title }}</a></h1>
+	<p>{{ post.text|linebreaksbr }}</p>
+</div>
+
+	{% endfor %}
 
 </body>
 </html>
